@@ -8,8 +8,8 @@ class Solution {
             
             // Count number of 1's in binary representation
             while (num > 0) {
-                count += num % 2;  // Check if last bit is 1
-                num = num / 2;     // Right shift by 1 (divide by 2)
+                count += num & 1;  // Check if last bit is 1
+                num = num >> 1;     // Right shift by 1 (divide by 2)
             }
             dp[i] = count;
         }
