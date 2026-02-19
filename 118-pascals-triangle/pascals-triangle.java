@@ -29,10 +29,7 @@ class Solution {
             }
             else{
             sub1=res.get(i-1);
-            int a=sub1.get(j-1);
-            int b = sub1.get(j);
-            int c = a+b;
-            sub.add(c);
+            sub.add(sub1.get(j-1)+sub1.get(j));
             }
         }
         res.add(new ArrayList<>(sub));
@@ -40,5 +37,4 @@ class Solution {
     }   
     return res;
     }
-
 }
